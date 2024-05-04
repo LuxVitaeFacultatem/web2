@@ -3,13 +3,35 @@
 {% block titulo %}Tienda Virtual{% endblock %}
 
 {% block contenido %}
-<table align="center">
-    {% for producto in productos %}
-    <tr>
-        <td>{{ producto.marca }}</td>
-        <td><a href="/producto/{{ producto.id }}"> {{ producto.nombre }}</a></td>
-        <td style="text-align:right">{{ "{:,}".format(producto.precio) }}</td>
-    </tr>
-    {% endfor %}
-</table>
+<div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+
+            {% for producto in productos %}
+            <div class="row p-2 bg-white border rounded mt-2">
+                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
+                        src="{{url_for('static', filename='fotos/') }}{{producto.id}}.jpg"></div>
+                <div class="d-flex row col-md-6 mt-1 justify-content-center align-content-center">
+                    <h5>{{ producto.nombre }}</h5>
+                    <div class="d-flex flex-row">
+                        <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i></div><span>{{producto.marca}}</span>
+                    </div>
+                    <div class="mt-1 mb-1 spec-1"><span>Categoria: {{producto.categoria}}</span></div>
+                </div>
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                    <div class="d-flex flex-row align-items-center">
+                        <h4 class="mr-1">{{ "{:,}".format(producto.precio) }}</h4>
+                    </div>
+                    <div class="d-flex flex-column mt-4"><a href="/producto/{{ producto.id }}"><button
+                            class="btn btn-primary btn-sm" type="button">Ver productos</button></a></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/grid_card.js')}}"></script>
+</div>
+
 {% endblock %}

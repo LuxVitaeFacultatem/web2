@@ -1,16 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
-
 body {
-    font-family: "Oxygen";
-    background: #2eb29c;
+    background: #eee
 }
 
-table {
-    background-color: #fff;
+.ratings i {
+    font-size: 16px;
+    color: red
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.strike-text {
+    color: red;
+    text-decoration: line-through
+}
+
+.product-image {
+    width: 100%
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 3px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block
+}
+
+.spec-1 {
+    color: #938787;
+    font-size: 15px
+}
+
+h5 {
+    font-weight: 400
+}
+
+.para {
+    font-size: 16px
 }
