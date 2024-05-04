@@ -1,10 +1,10 @@
 # Título del Proyecto
 
-Segundo Parcial de la asignatura Programacion 1 Universidad libre Seccional Cali
+Segundo Parcial de la asignatura Programacion 1 Universidad libre Seccional Cali Version Final
 
 ## Comenzando 🚀
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+Mira **Ejecucion para deasarrollo** para conocer como ejecutar el proyecto.
 
 ### Pre-requisitos 📋
 
