@@ -3,23 +3,46 @@
 {% block titulo %}Tienda Virtual{% endblock %}
 
 {% block contenido %}
-<table>
 
-    <tr>
-        <td>
-            <img src="{{url_for('static', filename='fotos/') }}{{producto.id}}.jpg" alt="" width="256px">
-        </td>
-        <td>
-            <h2>{{ producto.categoria }} - {{ producto.marca }}</h2>
-            <h1>{{ producto.nombre }}</h1>
-            <h2>{{ "{:,}".format(producto.precio) }}</h2>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <button><a href="{{url_for('index')}}">Regresar</a></button>
-        </td>
-    </tr>
-</table>
+<section class="py-5">
+    <div class="container">
+        <div class="row gx-5">
+            <aside class="col-lg-6">
+                <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                    <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
+                        src="{{url_for('static', filename='fotos/') }}{{producto.id}}.jpg" />
+                </div>
+            </aside>
+            <main class="d-flex col-lg-6 justify-content-center align-items-center">
+                <div class="ps-lg-3">
+                    <h4 class="title text-dark">
+                        {{ producto.nombre }}
+                    </h4>
 
+                    <div class="mb-3">
+                        <span class="h5">{{ "{:,}".format(producto.precio) }}</span>
+                    </div>
+
+                    <p>
+                        {{ producto.descripcion }}
+                    </p>
+
+                    <div class="row">
+                        <dt class="col-3">Marca:</dt>
+                        <dd class="col-9">{{ producto.marca }}</dd>
+
+                        <dt class="col-3">Categoria:</dt>
+                        <dd class="col-9">{{ producto.categoria }}</dd>
+
+                    </div>
+
+                    <div class="row">
+                        <a href="{{url_for('index')}}"><button type="button" class="btn btn-outline-secondary">Volver al
+                                inicio</button></a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
 {% endblock %}
