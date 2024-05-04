@@ -43,6 +43,8 @@ def Crear_db():
          '32Gb, Pantalla 7p, USB-C, Wifi', 1390000),
         (304, 'Tablet', 'Huawei', 'MatePad SE 10.1',
          '128Gb, Pantalla 10.1p 2K, USB-C, Wifi', 931000),
+        (305, 'Monitores', 'LG', '4k oled',
+         '120hz 4k oled monitor lg alta calidad ', 1999999),
     ]
 
     cursor.executemany(""" 

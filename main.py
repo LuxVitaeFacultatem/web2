@@ -6,6 +6,7 @@ productos = CargarDatos()
 # Crear un diccionario para agrupar los productos por categoría
 productos_por_categoria = {}
 
+
 # Agrupar los productos por categoría
 for producto in productos:
     categoria = producto['categoria']
@@ -41,6 +42,10 @@ def categoria(categoria):
         return render_template('categoria.html', categoria=categoria, productos=productos_por_categoria[categoria])
     else:
         return redirect('/')
+    
+@app.route('/favoritos')
+def favoritos():
+    return render_template('favoritos.html')
 
 
 # Programa princiupal
